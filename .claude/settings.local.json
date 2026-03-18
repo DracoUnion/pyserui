@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(findstr /R \"^[A-Za-z]\")",
+      "Bash(Select-Object -First 300)"
+    ]
+  }
+}
