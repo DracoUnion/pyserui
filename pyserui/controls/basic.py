@@ -84,7 +84,10 @@ class SuiButton(SuiControl):
         self.on_click(self)
 
 class SuiEdit(SuiControl):
-    def __init__(self,parent=None,text=''): super().__init__(parent); self._text=str(text); self._caret_pos=len(self._text); self._read_only=False; self._max_length=0; self._password_char=None
+    def __init__(self,parent=None,text=''):
+        if isinstance(parent, str) and not text:
+            text, parent = parent, None
+        super().__init__(parent); self._text=str(text); self._caret_pos=len(self._text); self._read_only=False; self._max_length=0; self._password_char=None
     @property
     def text(self): return self._text
     @text.setter

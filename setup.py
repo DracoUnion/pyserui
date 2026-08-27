@@ -31,9 +31,8 @@ setup(
     long_description_content_type='text/markdown',
     # 项目URL
     url='https://github.com/wizardforcel/pyserui',
-    # 包目录 (src layout)
-    package_dir={'': 'src'},
-    packages=find_packages('src'),
+    # 包目录
+    packages=find_packages(),
     # Python版本要求
     python_requires='>=3.7',
     # 依赖项
